@@ -16,5 +16,8 @@
     "lib": "@/lib",
     "utils": "@workspace/ui/lib/utils",
     "ui": "@workspace/ui/components"
+  },
+  "registries": {
+    "@spell": "https://spell.sh/r/{name}.json"
   }
 }
