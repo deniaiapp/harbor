@@ -1,4 +1,4 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist_Mono, Space_Grotesk, Cormorant_Garamond } from "next/font/google";
 import type { Metadata } from "next";
 
 import "@workspace/ui/styles/globals.css";
@@ -6,7 +6,7 @@ import { Providers } from "@/components/providers";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { siteConfig } from "@/lib/seo";
 
-const fontSans = Geist({
+const fontSans = Space_Grotesk({
   subsets: ["latin"],
   variable: "--font-sans",
 });
@@ -14,6 +14,12 @@ const fontSans = Geist({
 const fontMono = Geist_Mono({
   subsets: ["latin"],
   variable: "--font-mono",
+});
+
+const fontDisplay = Cormorant_Garamond({
+  subsets: ["latin"],
+  variable: "--font-display",
+  weight: ["400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -55,8 +61,15 @@ export const metadata: Metadata = {
       "max-video-preview": -1,
     },
   },
+  manifest: "/site.webmanifest",
   icons: {
-    icon: "/favicon.ico",
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+    ],
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
+    shortcut: ["/favicon.ico"],
   },
 };
 
@@ -67,7 +80,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${fontSans.variable} ${fontMono.variable} font-sans antialiased`}>
+      <body
+        className={`${fontSans.variable} ${fontMono.variable} ${fontDisplay.variable} font-sans antialiased`}
+      >
         <Providers>
           <div className="fixed top-4 right-4 z-50">
             <ThemeToggle />
