@@ -14,20 +14,20 @@
     "format:check": "oxfmt --check src tests"
   },
   "dependencies": {
-    "@ai-sdk/openai": "^3.0.30",
-    "@hono/node-server": "^1.19.6",
-    "@octokit/auth-app": "^8.1.1",
-    "@octokit/rest": "^21.1.1",
+    "@ai-sdk/openai": "^3.0.41",
+    "@hono/node-server": "^1.19.11",
+    "@octokit/auth-app": "^8.2.0",
+    "@octokit/rest": "^22.0.1",
     "@workspace/shared": "workspace:*",
-    "ai": "^6.0.97",
-    "hono": "^4.10.6",
-    "zod": "^3.25.76"
+    "ai": "^6.0.116",
+    "hono": "^4.12.8",
+    "zod": "^4.3.6"
   },
   "devDependencies": {
-    "@types/node": "^25.1.0",
-    "@typescript/native-preview": "^7.0.0-dev.20260223.1",
+    "@types/node": "^25.5.0",
+    "@typescript/native-preview": "^7.0.0-dev.20260314.1",
     "@workspace/typescript-config": "workspace:*",
-    "oxlint": "^1.49.0",
-    "vitest": "^4.0.18"
+    "oxlint": "^1.55.0",
+    "vitest": "^4.1.0"
   }
 }
