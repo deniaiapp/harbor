@@ -13,8 +13,8 @@
     "typecheck": "tsgo --noEmit"
   },
   "devDependencies": {
-    "@typescript/native-preview": "^7.0.0-dev.20260223.1",
+    "@typescript/native-preview": "^7.0.0-dev.20260314.1",
     "@workspace/typescript-config": "workspace:*",
-    "oxlint": "^1.49.0"
+    "oxlint": "^1.55.0"
   }
 }
